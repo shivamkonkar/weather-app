@@ -1,6 +1,7 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const https = require('https')
+const PORT = process.env.PORT || 3000;
 
 
 
@@ -37,6 +38,6 @@ app.post("/", function(req, res){
     })
 })
 
-app.listen(process.env.PORT || 3000, function(){
-    console.log("Server started http://localhost:3000/");
-})
+app.listen(PORT, function(){
+    console.log(`The app start on http://localhost:${PORT}`);
+});
